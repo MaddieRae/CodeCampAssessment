@@ -21,6 +21,14 @@ public class Menu {
             throw new NotFoundException();
         }
     }
+    public void clickClear() {
+        WebElement clearButton = driver.findElement(By.cssSelector("[aria-label='clear']"));
+        if (clearButton != null) {
+            clearButton.click();
+        } else {
+            throw new NotFoundException();
+        }
+    }
         public void clickPlanet () {
             driver.findElement(By.cssSelector("[aria-label='planets']")).click();
         }
