@@ -21,11 +21,11 @@ public class BaseTests {
         driver.get("https://d3udduv23dv8b4.cloudfront.net/");
     }
 
-  //  @AfterEach
-   // public void Cleanup(){
-    //    if (driver != null){
-      //      driver.quit();
-     //   }
-   // }
+   @AfterEach
+    public void Cleanup(){
+        if (driver != null){
+            driver.quit();
+        }
+    }
 }
 
