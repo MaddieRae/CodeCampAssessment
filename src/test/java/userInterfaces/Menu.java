@@ -40,10 +40,6 @@ public class Menu {
                 break;
             }
             sidesButton.click();
-            //if (sidesButton == null) {
-              //  sidesButton.click();
-            // else {
-               // throw new NotFoundException();
         }
     }
 }

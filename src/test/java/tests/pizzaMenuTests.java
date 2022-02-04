@@ -5,6 +5,7 @@ import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
 import tests.BaseTests;
 import userInterfaces.Menu;
+import userInterfaces.menuTile;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -25,10 +26,13 @@ public class pizzaMenuTests extends BaseTests {
                 chunkkychips = food;
                 break;
             }
-           var chippyText = food.getText();
+            var chippyText = food.getText();
             Assertions.assertNotNull(chippyText);
             var kjs = driver.findElement(By.tagName("p"));
             Assertions.assertEquals("3273 kj",kjs);
+            var menuTile = new menuTile(food);
+
+            menuTile.getKilojoules();
         }
     }
 }

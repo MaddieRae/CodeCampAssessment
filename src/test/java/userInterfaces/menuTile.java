@@ -16,11 +16,4 @@ public class menuTile {
     {
         return element.findElement(By.tagName("p")).getText();
     }
-   // public String getRadius()
-    //{
-      //  return element.findElement(By.className("radius")).getText();
-    //}
-
-
-
-}
+    }

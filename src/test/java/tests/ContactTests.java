@@ -6,7 +6,6 @@ import tests.BaseTests;
 import userInterfaces.Menu;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-
 import java.util.concurrent.TimeUnit;
 
 public class ContactTests extends BaseTests {
@@ -31,14 +30,9 @@ public class ContactTests extends BaseTests {
 
         Assertions.assertNotNull(emailError);
         Assertions.assertNotNull(telephoneError);
-
         myMenu.clickClear();
-
-
-
-        }
+    }
         public boolean isPopupVisible() {
-       // return driver.findElement(By.className("form-error mb-4")).isDisplayed();
         Assertions.assertFalse(driver.findElement(By.className("form-error mb-4")).isDisplayed());
             return false;
         }
