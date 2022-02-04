@@ -13,20 +13,19 @@ public class BaseTests {
     protected WebDriver driver;
 
     @BeforeEach
-    public void getDriverSetup() throws MalformedURLException {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
+    public void Setup() throws MalformedURLException {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
         //driver = new ChromeDriver();
 
-        var chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), chromeOptions);
-        driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/");
+        driver = new ChromeDriver();
+        driver.get("https://d3udduv23dv8b4.cloudfront.net/");
     }
 
-    @AfterEach
-    public void Cleanup(){
-        if (driver != null){
-            driver.quit();
-        }
-    }
+  //  @AfterEach
+   // public void Cleanup(){
+    //    if (driver != null){
+      //      driver.quit();
+     //   }
+   // }
 }
 
