@@ -16,9 +16,19 @@ public class pizzaMenuTests extends BaseTests {
         var myMenu = new Menu(driver);
         myMenu.clickMenu();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.MILLISECONDS);
         myMenu.clickSides();
-
+        var headings3 = driver.findElements(By.tagName("h3"));
+        WebElement chunkkychips = null;
+        for (WebElement food : headings3) {
+            if (food.getText().contains("chunky")) {
+                chunkkychips = food;
+                break;
+            }
+           var chippyText = food.getText();
+            Assertions.assertNotNull(chippyText);
+            var kjs = driver.findElement(By.tagName("p"));
+            Assertions.assertEquals("3273 kj",kjs);
+        }
     }
-
 }
